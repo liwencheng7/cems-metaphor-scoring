@@ -1,0 +1,12 @@
+\section{Conclusion}
+
+We predict human mean ratings for new Chinese metaphor items using rated examples from the same task. Combining a rubric-guided LLM with semantic neighbors and embedding regression lowers macro MAE on two datasets under grouped cross-validation and in all five tested model--task combinations. On COGMED, it also gives lower MAE than the local AutoSCORE and RULERS-guided direct-score adaptations. Component ablations identify the LLM and semantic-neighbor ratings as the main contributors on COGMED. The framework supports prediction of continuous rating levels, while the Wang analysis distinguishes this use from ranking closely matched texts within a sentence class.
+
+\newpage
+\section*{Limitations}
+
+Both tasks use labels from the same task. Repeated dataset analysis during development is not captured by bootstrap intervals over saved predictions. The targets are mean ratings, which do not describe individual differences.
+
+\section*{Ethical Considerations}
+
+We use existing norm datasets and collect no new participant data. The outputs describe aggregate judgments about texts and should not be interpreted as assessments of individual participants.

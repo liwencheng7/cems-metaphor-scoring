@@ -1,0 +1,121 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Do et~al.(2024)Do, Kim, and Lee}]{do2024arts}
+Heejin Do, Yunsu Kim, and Gary Lee. 2024.
+\newblock \href {https://doi.org/10.18653/v1/2024.findings-eacl.115}
+  {Autoregressive score generation for multi-trait essay scoring}.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  EACL 2024}, pages 1659--1666, St. Julian's, Malta. Association for
+  Computational Linguistics.
+
+\bibitem[{Eltanbouly et~al.(2025)Eltanbouly, Albatarni, and
+  Elsayed}]{eltanbouly2025trates}
+Sohaila Eltanbouly, Salam Albatarni, and Tamer Elsayed. 2025.
+\newblock \href {https://doi.org/10.18653/v1/2025.findings-acl.1054} {{TRATES}:
+  Trait-specific rubric-assisted cross-prompt essay scoring}.
+\newblock In \emph{Findings of the Association for Computational Linguistics:
+  ACL 2025}, pages 20528--20543, Vienna, Austria. Association for Computational
+  Linguistics.
+
+\bibitem[{Hashemi et~al.(2024)Hashemi, Eisner, Rosset, Van~Durme, and
+  Kedzie}]{hashemi2024llmrubric}
+Helia Hashemi, Jason Eisner, Corby Rosset, Benjamin Van~Durme, and Chris
+  Kedzie. 2024.
+\newblock \href {https://doi.org/10.18653/v1/2024.acl-long.745} {{LLM}-rubric:
+  A multidimensional, calibrated approach to automated evaluation of natural
+  language texts}.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 13806--13834.
+  Association for Computational Linguistics.
+
+\bibitem[{Hong et~al.(2026)Hong, Yao, Shen, Xu, Wei, and Dong}]{hong2026rulers}
+Yihan Hong, Huaiyuan Yao, Bolin Shen, Wanpeng Xu, Hua Wei, and Yushun Dong.
+  2026.
+\newblock \href {https://aclanthology.org/2026.emnlp-main.566/} {From rubrics
+  to reliable scores: Evidence-grounded text evaluation with {LLM} judges}.
+\newblock In \emph{Proceedings of the 2026 Conference on Empirical Methods in
+  Natural Language Processing}, pages 13001--13021. Association for
+  Computational Linguistics.
+
+\bibitem[{Huang et~al.(2024)Huang, Chen, Huang, Chen, and
+  Zou}]{huang2024cogmed}
+Jiayu Huang, Lixin Chen, Yanyang Huang, Yuying Chen, and Laiquan Zou. 2024.
+\newblock \href {https://doi.org/10.1057/s41599-024-03593-2} {{COGMED}: a
+  database for {Chinese} olfactory and gustatory metaphor}.
+\newblock \emph{Humanities and Social Sciences Communications}, 11(1):1080.
+
+\bibitem[{Liu et~al.(2023)Liu, Iter, Xu, Wang, Xu, and Zhu}]{liu-etal-2023-g}
+Yang Liu, Dan Iter, Yichong Xu, Shuohang Wang, Ruochen Xu, and Chenguang Zhu.
+  2023.
+\newblock \href {https://doi.org/10.18653/v1/2023.emnlp-main.153} {{G}-eval:
+  {NLG} evaluation using {G}pt-4 with better human alignment}.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in
+  Natural Language Processing}, pages 2511--2522, Singapore. Association for
+  Computational Linguistics.
+
+\bibitem[{Mangiaterra et~al.(2025)Mangiaterra, Al-Azary, Barattieri~di
+  San~Pietro, Canal, and Bambini}]{mangiaterra2025gptnorms}
+Veronica Mangiaterra, Hamad Al-Azary, Chiara Barattieri~di San~Pietro, Paolo
+  Canal, and Valentina Bambini. 2025.
+\newblock \href {https://doi.org/10.48550/arXiv.2512.12444} {Can {GPT} replace
+  human raters? validity and reliability of machine-generated norms for
+  metaphors}.
+\newblock \emph{Preprint}, arXiv:2512.12444.
+
+\bibitem[{Peng et~al.(2025)Peng, Hsu, Chersoni, Qiu, and
+  Huang}]{peng2025multilingualnorms}
+Bo~Peng, Yu-yin Hsu, Emmanuele Chersoni, Le~Qiu, and Chu-Ren Huang. 2025.
+\newblock \href {https://doi.org/10.1007/s10579-025-09866-9} {Multilingual
+  prediction of semantic norms with language models: A study on {English} and
+  {Chinese}}.
+\newblock \emph{Language Resources and Evaluation}, 59(4):3911--3937.
+
+\bibitem[{Pissani et~al.(2026)Pissani, Jobanputra, and
+  Demberg}]{pissani2026llmnorms}
+Laura Pissani, Mayank Jobanputra, and Vera Demberg. 2026.
+\newblock \href {https://doi.org/10.3389/flang.2026.1756514} {{LLMs} replicate
+  metaphor norms based on word co-occurrence but struggle with topic-vehicle
+  mappings}.
+\newblock \emph{Frontiers in Language Sciences}, 5:1756514.
+
+\bibitem[{Wang(2022)}]{wang2022normed}
+Xin Wang. 2022.
+\newblock \href {https://doi.org/10.3389/fpsyg.2022.922722} {Normed dataset for
+  novel metaphors, novel similes, literal and anomalous sentences in
+  {Chinese}}.
+\newblock \emph{Frontiers in Psychology}, 13:922722.
+
+\bibitem[{Wang et~al.(2026)Wang, Ding, Wu, Sun, Liu, and
+  Zhai}]{wang2026autoscore}
+Yun Wang, Zhaojun Ding, Xuansheng Wu, Siyue Sun, Ninghao Liu, and Xiaoming
+  Zhai. 2026.
+\newblock \href {https://doi.org/10.1609/aaai.v40i48.42123} {{AutoSCORE}:
+  Enhancing automated scoring with multi-agent large language models via
+  structured component recognition}.
+\newblock \emph{Proceedings of the AAAI Conference on Artificial Intelligence},
+  40(48):40898--40906.
+
+\bibitem[{Xiao et~al.(2024)Xiao, Liu, Zhang, Muennighoff, Lian, and
+  Nie}]{xiao2024cpack}
+Shitao Xiao, Zheng Liu, Peitian Zhang, Niklas Muennighoff, Defu Lian, and
+  Jian-Yun Nie. 2024.
+\newblock \href {https://doi.org/10.1145/3626772.3657878} {{C-Pack}: Packed
+  resources for general {Chinese} embeddings}.
+\newblock In \emph{Proceedings of the 47th International ACM SIGIR Conference
+  on Research and Development in Information Retrieval}, pages 641--649.
+
+\bibitem[{Yang et~al.(2025)}]{yang2025qwen3}
+An~Yang et~al. 2025.
+\newblock \href {https://doi.org/10.48550/arXiv.2505.09388} {{Qwen3} technical
+  report}.
+\newblock \emph{Preprint}, arXiv:2505.09388.
+
+\bibitem[{Zhou et~al.(2026)Zhou, Li, Tse, Xie, and
+  Huang}]{zhou2026tastingemotions}
+Yanyun Zhou, Wei Li, Chi-Shing Tse, Jiushu Xie, and Yanli Huang. 2026.
+\newblock \href {https://doi.org/10.1007/s12559-026-10594-7} {Tasting emotions
+  with {GPT}-4o: Comparing {AI} and human norms in metaphoric associations}.
+\newblock \emph{Cognitive Computation}, 18(1):47.
+
+\end{thebibliography}

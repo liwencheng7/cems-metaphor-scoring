@@ -1,0 +1,13 @@
+\section{Discussion}
+
+\paragraph{Adapting criterion-guided scoring.}
+The connection with AES lies in evaluating text against explicit criteria and relating those judgments to human scores. For metaphor texts, the criteria describe properties such as familiarity and metaphoricity, each with its own interpretation. CEMS implements this connection through dimension-specific prompts and rated examples. The contribution is the combination of these judgments with predictions learned from human-rated texts. The component comparisons identify the sources of predictive gains within this design.
+
+\paragraph{Using human-rated examples.}
+Rated expressions serve two roles: they illustrate the scale in the LLM prompt and provide labels for numerical predictors. The improvement over intercept-only correction, together with the KNN ablation, supports using semantic-neighbor ratings alongside the LLM's judgment. The weaker Ridge contribution shows that adding another supervised predictor does not necessarily provide useful additional information. These findings concern new items drawn from the same rating task as the training examples.
+
+\paragraph{Interpreting continuous scores.}
+The dimension-level analysis shows that errors vary across the properties being rated. A single average score across dimensions conceals this variation. The lower MAE supports estimating approximate rating levels. Selecting between closely matched expressions also requires useful within-class ranking. The weak novel-metaphor correlations on Wang identify a concrete boundary for that use. Human judgments remain important when small differences between candidate materials determine their selection.
+
+\paragraph{Evidence and score validity.}
+The mapping prompt provides an interpretation and quotations that can be checked against the text. Validating a quotation establishes its location, not the correctness of the mapping or its role in producing the score. Evidence traceability and numerical agreement with human ratings therefore require separate evaluation.

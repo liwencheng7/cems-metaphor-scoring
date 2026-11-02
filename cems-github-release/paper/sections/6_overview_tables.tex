@@ -1,0 +1,40 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{7pt}
+\caption{Macro-averaged COGMED results over seven dimensions. The LLM receives five rated examples. Adapted scoring pipelines use the same backbone and training-example pool; RULERS-adapted uses the judge's direct continuous score (Section~\ref{sec:adaptations}).}
+\label{tab:cogmed}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & MAE $\downarrow$ & RMSE $\downarrow$ & Pearson $\uparrow$ & Spearman $\uparrow$ & QWK $\uparrow$\\
+\midrule
+BGE-KNN & 0.304 & 0.409 & 0.670 & 0.633 & 0.471\\
+BGE-Ridge & 0.380 & 0.473 & 0.618 & 0.597 & 0.183\\
+Rubric-guided LLM & 0.292 & 0.411 & 0.715 & 0.700 & 0.544\\
+LLM + intercept calibration & 0.289 & 0.406 & 0.715 & 0.699 & \textbf{0.579}\\
+CEMS & \textbf{0.265} & \textbf{0.361} & \textbf{0.750} & \textbf{0.721} & 0.537\\
+\midrule
+\multicolumn{6}{l}{\textit{Adapted scoring pipelines (Section~\ref{sec:adaptations})}}\\
+AutoSCORE-adapted & 0.311 & 0.446 & 0.676 & 0.665 & 0.511\\
+RULERS-adapted (direct score) & 0.336 & 0.480 & 0.638 & 0.629 & 0.498\\
+\bottomrule
+\end{tabular}
+\end{table*}
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{7pt}
+\caption{Macro-averaged Wang results on the original 1--7 scale.}
+\label{tab:wang}
+\begin{tabular}{lrrrrr}
+\toprule
+Method & MAE $\downarrow$ & RMSE $\downarrow$ & Pearson $\uparrow$ & Spearman $\uparrow$ & QWK $\uparrow$\\
+\midrule
+BGE-KNN & 0.970 & 1.253 & 0.537 & 0.436 & 0.459\\
+BGE-Ridge & 1.147 & 1.332 & 0.563 & 0.475 & 0.212\\
+Rubric-guided LLM & 0.602 & 0.810 & \textbf{0.829} & \textbf{0.750} & 0.793\\
+LLM + intercept calibration & 0.564 & 0.772 & 0.827 & 0.744 & \textbf{0.804}\\
+CEMS & \textbf{0.549} & \textbf{0.745} & 0.827 & 0.736 & 0.796\\
+\bottomrule
+\end{tabular}
+\end{table*}

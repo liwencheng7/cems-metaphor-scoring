@@ -1,0 +1,78 @@
+\section{Results}
+
+\subsection{Overall continuous scoring performance}
+
+CEMS gives the lowest MAE and RMSE among the compared systems on both datasets (Tables~\ref{tab:cogmed} and~\ref{tab:wang}). On COGMED, macro MAE decreases from 0.292 for the rubric-guided LLM to 0.265 for CEMS. The paired difference is $-0.0270$ (95\% CI $[-0.0350,-0.0198]$). On Wang, MAE decreases from 0.602 to 0.549 on the original 1--7 scale. The corresponding intercept-only baselines obtain 0.289 and 0.564. Thus, combining the predictors improves the estimates of human means beyond correcting an overall score offset.
+
+\input{sections/6_overview_tables}
+
+
+
+
+
+\paragraph{Adapted scoring frameworks.}
+\label{sec:adapter_results}
+On the same 671 COGMED test items, AutoSCORE-adapted obtains MAE 0.3113, compared with 0.2652 for CEMS. The paired difference is $+0.0461$ (95\% group-bootstrap CI $[0.0333,0.0597]$). CEMS also has lower RMSE and higher correlations and QWK. RULERS-adapted direct scoring obtains MAE 0.3361 on the same items. Its paired MAE difference from CEMS is $+0.0709$ (95\% group-bootstrap CI $[0.0580,0.0850]$). Thus, CEMS estimates human means more closely than either adapted pipeline under the specified evaluation conditions.
+
+\subsection{Performance across rating dimensions}
+
+CEMS lowers MAE on all seven COGMED dimensions (Table~\ref{tab:dimension_mae}). The largest absolute reductions are in naturalness, from 0.353 to 0.292, and metaphoricity, from 0.357 to 0.312. Familiarity changes less, from 0.389 to 0.376, and remains the dimension with the highest error. The improvements therefore extend across the rated properties, with different magnitudes. These dimension-level point estimates show where the overall gain occurs; the component ablations below examine which predictors contribute to it.
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\caption{COGMED MAE by dimension for the rubric-guided LLM and CEMS.}
+\label{tab:dimension_mae}
+\begin{tabular}{lrr}
+\toprule
+Dimension & LLM & CEMS\\
+\midrule
+Familiarity & 0.389 & 0.376\\
+Meaningfulness & 0.249 & 0.234\\
+Metaphoricity & 0.357 & 0.312\\
+Valence & 0.227 & 0.209\\
+Difficulty & 0.213 & 0.200\\
+Imageability & 0.258 & 0.233\\
+Naturalness & 0.353 & 0.292\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Contribution of the scoring components}
+
+The COGMED ablation in Table~\ref{tab:ablation} removes each component and refits the remaining fusion weights. Removing the LLM raises MAE by 0.0345 (95\% CI $[0.0255,0.0434]$), the largest increase. Removing BGE-KNN raises MAE by 0.0076 ($[0.0037,0.0115]$), showing that ratings from semantic neighbors add information to the remaining predictors. Removing the intercept raises MAE by 0.0043 ($[0.0015,0.0074]$).
+
+The change after removing BGE-Ridge is only 0.0010, with an interval spanning zero; its removal also increases QWK from 0.537 to 0.565. The ablation primarily supports combining the LLM with semantic-neighbor ratings. Evidence for an additional contribution from Ridge is weaker.
+
+\begin{table}[t]
+\centering
+\small
+\caption{COGMED component ablation. $\Delta$MAE is the ablated model minus full fusion; intervals use paired item bootstrap.}
+\label{tab:ablation}
+\begin{tabular}{lrr}
+\toprule
+Configuration & $\Delta$MAE & 95\% CI\\
+\midrule
+Remove LLM & 0.0345 & [0.0255, 0.0434]\\
+Remove BGE-KNN & 0.0076 & [0.0037, 0.0115]\\
+Remove BGE-Ridge & 0.0010 & [-0.0006, 0.0027]\\
+Remove intercept & 0.0043 & [0.0015, 0.0074]\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Mapping prompt.}
+On COGMED, MAE is 0.292 with explicit mapping extraction and 0.296 without it. The paired MAE difference is $-0.0039$ (95\% CI $[-0.0120,0.0040]$), providing no clear evidence of an accuracy gain from explicit mapping extraction.
+
+\subsection{Performance with different scoring models}
+
+Fusion lowers MAE in all five model--task combinations in Appendix Figure~\ref{fig:backbones}: by 9.2\%, 8.7\%, and 43.7\% for the three COGMED models, and by 8.9\% and 11.6\% for the two Wang models. The direction of improvement is consistent across these point estimates. Llama's larger relative gain reflects its higher initial error; it does not indicate better final scores than the Qwen models. Appendix Table~\ref{tab:backbone_all} reports the absolute scores and all auxiliary metrics.
+
+
+
+\subsection{Score accuracy and item ranking}
+
+The auxiliary metrics distinguish accuracy in score values from agreement in item ordering. On COGMED, CEMS has the highest Pearson and Spearman correlations among the compared systems. On Wang, both correlations are slightly lower than for the uncalibrated LLM, despite lower MAE. For agreement after rounding, intercept-only calibration has the highest QWK on both datasets: 0.579 versus 0.537 for CEMS on COGMED, and 0.804 versus 0.796 on Wang. Improving continuous predictions does not guarantee the same ordering or rounded score assignments.
+
+Wang also permits a closer examination within sentence classes. Given the class label, a training-set class-median predictor obtains MAE 0.4718, compared with 0.5485 for text-only CEMS. This diagnostic uses additional metadata and indicates that class differences are informative about score levels. Within novel metaphors, CEMS has Spearman correlation 0.062. An exploratory representation and calibration variant reaches 0.190, still a weak association (Appendix~\ref{sec:appendix_extension}). The pooled results therefore need to be read alongside within-class results when the intended use is to rank similar metaphor materials.

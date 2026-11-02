@@ -1,0 +1,15 @@
+\section{Related Work}
+
+\subsection{Automated essay and student-response scoring}
+
+AES predicts human-assigned scores for student essays, either as an overall grade or as separate trait scores. ArTS generates multiple trait scores autoregressively \citep{do2024arts}. TRATES uses trait-specific rubrics to generate assessment questions, then combines the resulting features with other essay features in a regression model \citep{eltanbouly2025trates}. These approaches connect dimension-specific assessment with numerical prediction.
+
+AutoSCORE addresses automated scoring in educational assessment \citep{wang2026autoscore}. An extraction agent identifies rubric-relevant components in a student response, and a scoring agent uses the structured representation to assign scores. Its original inputs, rubrics, and evaluation concern student work. Our AutoSCORE-adapted baseline replaces them with metaphor expressions, metaphor rating definitions, and rated examples from the target dataset. The resulting comparison evaluates this adaptation to metaphor scoring. CEMS draws on the broader criterion-guided scoring approach, with a single LLM scoring branch and two predictors learned from human ratings.
+
+\subsection{Rubric-based text evaluation}
+
+Rubric-based scoring also appears in the evaluation of generated text. G-Eval uses LLMs to evaluate text under specified criteria \citep{liu-etal-2023-g}. LLM-Rubric combines rubric-question response distributions in a calibration network to predict human judgments across dimensions \citep{hashemi2024llmrubric}. CEMS instead combines a continuous LLM score with two text-based rating predictors, using a separate constrained combination for each dimension. RULERS uses a fixed rubric, evidence-supported judgments, and score calibration \citep{hong2026rulers}. These are general text-evaluation approaches, distinct from AES and metaphor rating. We use a local adaptation of RULERS-guided direct scoring as a comparison; its score calculation and the omitted calibration stage are specified in Section~\ref{sec:adaptations}.
+
+\subsection{Human ratings of metaphor texts}
+
+Metaphor rating datasets describe properties such as familiarity, meaningfulness, and imageability \citep{huang2024cogmed,wang2022normed}. These ratings characterize expressions rather than student performance. Recent work examines how closely LLM judgments reproduce human metaphor ratings and how they handle source--target mappings \citep{mangiaterra2025gptnorms,pissani2026llmnorms,zhou2026tastingemotions}. Work on English and Chinese semantic norms also compares prompted LLMs with predictors trained on text embeddings \citep{peng2025multilingualnorms}. We combine the two prediction routes in one scorer: a definition-guided LLM judgment and estimates learned directly from rated text embeddings. Our framework uses a dimension's definition to guide the LLM and human-rated examples to learn numerical predictions for new items from the same task.

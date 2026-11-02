@@ -1,0 +1,9 @@
+\section{Task Definition}
+
+We treat metaphor rating as a multidimensional regression task. Each dimension describes a property of the text and has a bounded rating scale. The target is the mean of human judgments, which can take fractional values even when individual raters select discrete scale points. Scores describe the property specified by each dimension, rather than a general measure of text quality.
+
+Let $\mathcal{D}=\{(x_i,\mathbf{y}_i)\}_{i=1}^{N}$ be a dataset in which $x_i$ is a Chinese expression and $\mathbf{y}_i=(y_{i1},\ldots,y_{iK})$ gives its mean human ratings on $K$ dimensions. We have ratings for a training subset $\mathcal{D}_{\mathrm{tr}}$ and want to predict $\hat{\mathbf{y}}_i$ for unscored items in $\mathcal{D}_{\mathrm{te}}$. Training and test items come from the same rating task. Predictions use only $\mathcal{D}_{\mathrm{tr}}$, the item text, and the definitions of the rating dimensions.
+
+We predict the mean human rating for each item, rather than an individual participant's response. Evaluation uses grouped five-fold cross-validation. In COGMED, normalized duplicate expressions stay in the same group. In Wang, sentence variants from the same item family stay together. Thus, each test fold contains unseen item families, with training examples drawn from the same task.
+
+Each dataset supplies its own labeled training set and fitted predictors. The evaluation measures prediction for new texts under the same rating definitions. Our Wang scorer uses the three corresponding COGMED definitions in its prompts and is fitted to the reconstructed Wang ratings. This evaluates prediction within each task.

@@ -1,0 +1,196 @@
+{
+  "macro_metrics": [
+    {
+      "method": "qwen",
+      "mae": 0.4011941885425891,
+      "rmse": 0.5401136707457523,
+      "pearson": 0.8285642198497205,
+      "spearman": 0.7496560441932931,
+      "rounded_qwk": 0.7582378472606153
+    },
+    {
+      "method": "llm_calibrated",
+      "mae": 0.37630688744521573,
+      "rmse": 0.5148371438695747,
+      "pearson": 0.8272767245155896,
+      "spearman": 0.7439865053042739,
+      "rounded_qwk": 0.7470553842989557
+    },
+    {
+      "method": "bge_knn",
+      "mae": 0.6464408113440759,
+      "rmse": 0.8356123132315506,
+      "pearson": 0.5367539550219919,
+      "spearman": 0.43564080666342364,
+      "rounded_qwk": 0.46175684282385415
+    },
+    {
+      "method": "bge_ridge",
+      "mae": 0.7645185428105301,
+      "rmse": 0.8877363846456853,
+      "pearson": 0.5634143210004623,
+      "spearman": 0.4753306722407025,
+      "rounded_qwk": 0.21298412481204532
+    },
+    {
+      "method": "learned_qwen_bge",
+      "mae": 0.36567560681440014,
+      "rmse": 0.49696087167805414,
+      "pearson": 0.8271353331309271,
+      "spearman": 0.7355130323155302,
+      "rounded_qwk": 0.7452404547082353
+    }
+  ],
+  "metrics": [
+    {
+      "dimension": "familiarity",
+      "method": "qwen",
+      "n": 356,
+      "mae": 0.4652276211752857,
+      "rmse": 0.5855182563646868,
+      "pearson": 0.8701281493468891,
+      "spearman": 0.7500107177722788,
+      "rounded_qwk": 0.8093304768610765
+    },
+    {
+      "dimension": "familiarity",
+      "method": "llm_calibrated",
+      "n": 356,
+      "mae": 0.4031460126596145,
+      "rmse": 0.516508948791911,
+      "pearson": 0.8699725060633996,
+      "spearman": 0.7472905528683882,
+      "rounded_qwk": 0.7905570637727798
+    },
+    {
+      "dimension": "familiarity",
+      "method": "bge_knn",
+      "n": 356,
+      "mae": 0.6650196282314961,
+      "rmse": 0.8335430597891955,
+      "pearson": 0.5495660370855932,
+      "spearman": 0.4436153770465159,
+      "rounded_qwk": 0.4388905624650342
+    },
+    {
+      "dimension": "familiarity",
+      "method": "bge_ridge",
+      "n": 356,
+      "mae": 0.7259550366317855,
+      "rmse": 0.8516789634290184,
+      "pearson": 0.6151745060069651,
+      "spearman": 0.5360661455780633,
+      "rounded_qwk": 0.3204960072713109
+    },
+    {
+      "dimension": "familiarity",
+      "method": "learned_qwen_bge",
+      "n": 356,
+      "mae": 0.39303347573245395,
+      "rmse": 0.49129865482636564,
+      "pearson": 0.8688531548635448,
+      "spearman": 0.729475136512422,
+      "rounded_qwk": 0.817052802877821
+    },
+    {
+      "dimension": "meaningfulness",
+      "method": "qwen",
+      "n": 356,
+      "mae": 0.4475422830717587,
+      "rmse": 0.577643937469205,
+      "pearson": 0.6751641111329862,
+      "spearman": 0.7002680191100595,
+      "rounded_qwk": 0.5383918770581778
+    },
+    {
+      "dimension": "meaningfulness",
+      "method": "llm_calibrated",
+      "n": 356,
+      "mae": 0.44385539271669455,
+      "rmse": 0.5707353487881355,
+      "pearson": 0.6715506616356118,
+      "spearman": 0.687020303125899,
+      "rounded_qwk": 0.5308763125061332
+    },
+    {
+      "dimension": "meaningfulness",
+      "method": "bge_knn",
+      "n": 356,
+      "mae": 0.5512536436314746,
+      "rmse": 0.7057051839239084,
+      "pearson": 0.38646991854625923,
+      "spearman": 0.3979370615758387,
+      "rounded_qwk": 0.29922419069359674
+    },
+    {
+      "dimension": "meaningfulness",
+      "method": "bge_ridge",
+      "n": 356,
+      "mae": 0.60036128078954,
+      "rmse": 0.7080681709128803,
+      "pearson": 0.3927631041666966,
+      "spearman": 0.4209235281757125,
+      "rounded_qwk": 0.09091228193337775
+    },
+    {
+      "dimension": "meaningfulness",
+      "method": "learned_qwen_bge",
+      "n": 356,
+      "mae": 0.42803971343316244,
+      "rmse": 0.5566873710296291,
+      "pearson": 0.6711446397104083,
+      "spearman": 0.6840429403938091,
+      "rounded_qwk": 0.4951928320997273
+    },
+    {
+      "dimension": "figurativeness",
+      "method": "qwen",
+      "n": 356,
+      "mae": 0.2908126613807229,
+      "rmse": 0.4571788184033651,
+      "pearson": 0.9404003990692863,
+      "spearman": 0.7986893956975412,
+      "rounded_qwk": 0.9269911878625915
+    },
+    {
+      "dimension": "figurativeness",
+      "method": "llm_calibrated",
+      "n": 356,
+      "mae": 0.28191925695933806,
+      "rmse": 0.4572671340286776,
+      "pearson": 0.9403070058477575,
+      "spearman": 0.7976486599185344,
+      "rounded_qwk": 0.919732776617954
+    },
+    {
+      "dimension": "figurativeness",
+      "method": "bge_knn",
+      "n": 356,
+      "mae": 0.7230491621692571,
+      "rmse": 0.967588695981548,
+      "pearson": 0.6742259094341231,
+      "spearman": 0.46536998136791635,
+      "rounded_qwk": 0.6471557753129316
+    },
+    {
+      "dimension": "figurativeness",
+      "method": "bge_ridge",
+      "n": 356,
+      "mae": 0.9672393110102648,
+      "rmse": 1.103462019595157,
+      "pearson": 0.6823053528277253,
+      "spearman": 0.4690023429683318,
+      "rounded_qwk": 0.2275440852314473
+    },
+    {
+      "dimension": "figurativeness",
+      "method": "learned_qwen_bge",
+      "n": 356,
+      "mae": 0.275953631277584,
+      "rmse": 0.44289658917816765,
+      "pearson": 0.9414082048188283,
+      "spearman": 0.7930210200403595,
+      "rounded_qwk": 0.9234757291471575
+    }
+  ]
+}

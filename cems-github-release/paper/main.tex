@@ -1,0 +1,42 @@
+\ifdefined\pdfoutput\pdfoutput=1\fi
+\documentclass[11pt]{article}
+\usepackage[final]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,booktabs,graphicx,tabularx}
+\usepackage{enumitem}
+
+\title{Multidimensional Continuous Scoring of Chinese Metaphor Texts}
+\author{Anonymous ACL submission}
+
+\begin{document}
+\raggedbottom
+\maketitle
+\begin{abstract}
+Metaphor texts vary in familiarity, imageability, and the extent to which they convey figurative meaning. Assigning scores to these properties supports the selection and comparison of materials for language research. We study multidimensional continuous scoring of Chinese metaphor texts, predicting mean human ratings within a specified interval. Our approach draws on automated essay scoring: a model evaluates text against explicit criteria, while human-rated examples connect those criteria to a numerical scale. We adapt this scoring approach to metaphor-related properties and introduce Calibrated Ensemble for Metaphor Scoring (CEMS), which combines a rubric-guided large language model with ratings of semantically similar examples and regression from text embeddings. The combination is fitted separately for each dimension using training data. We evaluate the framework on two Chinese rating datasets, with comparisons to individual predictors and task-adapted scoring methods. The evaluation examines numerical error, item ranking, and the contribution of each source of scores.
+\end{abstract}
+
+\input{sections/1_introduction}
+\input{sections/2_related_work}
+\input{sections/3_data_task}
+\input{sections/4_method}
+\input{sections/5_experimental_protocol}
+\input{sections/6_results}
+\input{sections/8_discussion}
+\input{sections/9_conclusion}
+
+\bibliography{references}
+
+\clearpage
+\appendix
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{16pt}
+\setlength{\@dblfptop}{0pt}
+\setlength{\@dblfpsep}{16pt}
+\makeatother
+\input{sections/10_supplement}
+\end{document}
